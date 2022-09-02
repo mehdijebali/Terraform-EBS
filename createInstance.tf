@@ -12,7 +12,7 @@ resource "aws_instance" "MyFirstInstnace" {
   key_name      = aws_key_pair.levelup_key.key_name
 
   tags = {
-    Name = "custom_instance"
+    Name = "custom_instance_test"
   }
 }
 
