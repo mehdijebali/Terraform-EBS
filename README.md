@@ -38,13 +38,23 @@ terraform apply
 ```
 ssh ec2-user@<public_ip>
 ```
-8. Create a new filesystem
+8. Create a new filesystem after switching to root user
 ```
-mkfs.ext4 /dev/xvdh
+sudo -s
+mkfs.ext4 /dev/xvdh (EBS Device Name)
 ```
 9. Create a new directory and mount the created filesystem
 ```
 mkdir -p /data
 mount /dev/xvdh /data
 ```
+10. Configure fstab file under **/etc** directory by adding the following line. You can use any ubuntu editor like nano or vim
+```
+/dev/xvdh /data ext4 defaults 0 0
+```
 ## Expected Results
+After the provisionning is done, we can verify the implementation of EC2 instance and EBS volume.
+#### EC2 Instance
+![](./Lab_Results/instance_ebs.png)
+#### EBS Volume
+![](./Lab_Results/2ndvol.png)
