@@ -1,5 +1,6 @@
 # Provision EBS (Elastic Block Store) with Terraform
-In this demo, we will create AWS EBS resource and attach it wiht an EC2 instance.
+In this demo, we will create AWS EBS resource and attach it wiht an EC2 instance regarding the following diagram:
+![](./Lab_Results/EBS.png)
 ## About EBS 
 AWS EBS is a level storage device that you can attach to your instances; it is like a secondary disk which is flexible. User can dynamically increase size, modify the provisioned IOPS capacity, and change volume type on live production volumes. We can attach multiple EBS volumes to a single instance. Note that EBS volume and instance must be in the sama Availability Zone. 
 There are several kinds of EBS Volumes
