@@ -12,7 +12,7 @@ resource "aws_instance" "MyFirstInstnace" {
   key_name      = aws_key_pair.levelup_key.key_name
 
   tags = {
-    Name = "custom_instance_test"
+    Name = "${var.INSTANCE_NAME}"
   }
 }
 
@@ -23,13 +23,13 @@ resource "aws_ebs_volume" "ebs-volume-1" {
   type              = var.EBS_TYPE
 
   tags = {
-    Name = "Secondary Volume Disk"
+    Name = "${var.EBS_NAME}"
   }
 }
 
 #Atatch EBS volume with AWS Instance
 resource "aws_volume_attachment" "ebs-volume-1-attachment" {
-  device_name = "/dev/xvdh"
+  device_name = var.EBS_DEVICE_NAME
   volume_id   = aws_ebs_volume.ebs-volume-1.id
   instance_id = aws_instance.MyFirstInstnace.id
 }

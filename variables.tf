@@ -29,3 +29,15 @@ variable "EBS_SIZE" {
 variable "EBS_TYPE" {
   default = "gp2"
 }
+
+variable "INSTANCE_NAME" {
+  default = "custom_instance_test"
+}
+
+variable "EBS_NAME" {
+  default = "Secondary Volume Disk"
+}
+
+variable "EBS_DEVICE_NAME" {
+  default = "/dev/xvdh"
+}
