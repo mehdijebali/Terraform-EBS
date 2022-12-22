@@ -42,3 +42,8 @@ resource "aws_instance" "MyFirstInstnace" {
   }
 
 }
+
+#Module Outputs
+output "instance_id" {
+  value = aws_instance.MyFirstInstnace.id
+} 

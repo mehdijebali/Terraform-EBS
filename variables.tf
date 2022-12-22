@@ -37,3 +37,15 @@ variable "EBS_NAME" {
 variable "EBS_DEVICE_NAME" {
   default = "/dev/xvdh"
 }
+
+variable "KEY_NAME" {
+  default = "levelup_key"
+}
+
+variable "SG_NAME" {
+  default = "allow-levelup-ssh"
+}
+
+variable "SG_DESCRIPTION" {
+  default = "security group that allows ssh connection"
+}
