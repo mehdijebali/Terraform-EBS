@@ -6,10 +6,6 @@ variable "AMI_ID" {
   default = "ami-09d3b3274b6c5d4aa"
 }
 
-variable "PATH_TO_PRIVATE_KEY" {
-  default = "levelup_key"
-}
-
 variable "PATH_TO_PUBLIC_KEY" {
   default = "levelup_key.pub"
 }
@@ -40,4 +36,16 @@ variable "EBS_NAME" {
 
 variable "EBS_DEVICE_NAME" {
   default = "/dev/xvdh"
+}
+
+variable "KEY_NAME" {
+  default = "levelup_key"
+}
+
+variable "SG_NAME" {
+  default = "allow-levelup-ssh"
+}
+
+variable "SG_DESCRIPTION" {
+  default = "security group that allows ssh connection"
 }
